@@ -16,7 +16,10 @@ import block_extra as be
 intents = nextcord.Intents.default()
 intents.members = True
 intents.message_content = True
-bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
+if (datetime.date.month == 4 and datetime.day == 1 ):
+     bot = commands.Bot(command_prefix="SLTK R2D, please do ", intents=intents, help_command=None)
+else:
+    bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 print(cmd.ping.desc)
 init()
 
