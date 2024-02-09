@@ -64,8 +64,8 @@ async def ping(ctx):
     await ctx.send(cmd.ping.cmddisplay % (bot.latency*1000))
     
 @bot.command(name="scream", description=cmd.scream.desc, aliases=cmd.scream.alias)
-async def scream(ctx, n:int=32):
-    await ctx.send("A"*n)
+async def scream(ctx, n:int=int((random.random()*16)+24):    # Sets n to any number from 24 to 39 
+    await ctx.send("A"*n)    # Sends n A's
    
 @bot.command(name="link", description=cmd.link.desc, aliases=cmd.link.alias)
 async def link(ctx, typ="r2d"):
